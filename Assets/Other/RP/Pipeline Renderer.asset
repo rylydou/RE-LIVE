@@ -20,32 +20,32 @@ MonoBehaviour:
   m_LightBlendStyles:
   - name: Normal
     maskTextureChannel: 0
-    renderTextureScale: 1
+    renderTextureScale: 0.5
     blendMode: 99
     customBlendFactors:
       multiplicative: 1
       additive: 0
-  - name: Blend Style 1
+  - name: Shiny
+    maskTextureChannel: 3
+    renderTextureScale: 0.5
+    blendMode: 99
+    customBlendFactors:
+      multiplicative: 1
+      additive: 0
+  - name: Both
     maskTextureChannel: 0
-    renderTextureScale: 1
-    blendMode: 1
+    renderTextureScale: 0.5
+    blendMode: 99
+    customBlendFactors:
+      multiplicative: 0.5
+      additive: 0.5
+  - name: Subtractive
+    maskTextureChannel: 0
+    renderTextureScale: 0.5
+    blendMode: 99
     customBlendFactors:
       multiplicative: 0
-      additive: 0
-  - name: Blend Style 2
-    maskTextureChannel: 0
-    renderTextureScale: 1
-    blendMode: 1
-    customBlendFactors:
-      multiplicative: 0
-      additive: 0
-  - name: Blend Style 3
-    maskTextureChannel: 0
-    renderTextureScale: 1
-    blendMode: 1
-    customBlendFactors:
-      multiplicative: 0
-      additive: 0
+      additive: -1
   m_UseDepthStencilBuffer: 1
   m_DefaultMaterialType: 0
   m_DefaultCustomMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}

@@ -15,7 +15,7 @@ TagManager:
   - 
   - Ground
   - Player
-  - Object
+  - Element
   - 
   - 
   - 
@@ -50,7 +50,7 @@ TagManager:
   - name: Player
     uniqueID: 3200171639
     locked: 0
-  - name: Object
+  - name: Element
     uniqueID: 202297145
     locked: 0
   - name: Default
@@ -58,6 +58,9 @@ TagManager:
     locked: 0
   - name: Effects
     uniqueID: 1310292173
+    locked: 0
+  - name: Water
+    uniqueID: 221814735
     locked: 0
   - name: Foreground
     uniqueID: 2908423549
