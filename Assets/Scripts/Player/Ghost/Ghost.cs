@@ -1,6 +1,4 @@
-﻿#pragma warning disable 649
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Ghost : MonoBehaviour
 {

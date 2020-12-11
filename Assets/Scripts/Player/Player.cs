@@ -1,9 +1,14 @@
-﻿#pragma warning disable 649
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Mover2D))]
 public class Player : MonoBehaviour
 {
+	// Perams
+	[SerializeField] Transform tFeetPos;
+	[Space]
+	[SerializeField] GameObject pfJumpEffect;
+	[SerializeField] GameObject pfLandEffect;
+
 	// Public Data
 	public GhostData data;
 
@@ -22,10 +27,14 @@ public class Player : MonoBehaviour
 		controls.Player.Jump.performed += (x) => mover.JumpDown();
 		controls.Player.Jump.canceled += (x) => mover.JumpUp();
 		controls.Player.Die.performed += (x) => GAME.current.Respawn();
+		controls.Player.Reload.performed += (x) => GAME.current.Reload();
 
 		GAME.current.onRespawn.AddListener(() => Destroy());
 
 		mover.bIsControlable = true;
+		mover.onJump.AddListener(() => Util.TryInstantiate(pfJumpEffect, tFeetPos.position, Quaternion.identity));
+		mover.onLand.AddListener(() => Util.TryInstantiate(pfLandEffect, tFeetPos.position, Quaternion.identity));
+
 		data = new GhostData(0);
 	}
 
@@ -44,7 +53,7 @@ public class Player : MonoBehaviour
 		// Dying lol
 		if (transform.position.y < Camera.main.transform.position.y - Camera.main.orthographicSize - 1)
 		{
-			GAME.current.Respawn();
+			Die();
 		}
 
 		// Animation
@@ -56,13 +65,18 @@ public class Player : MonoBehaviour
 		controls.Disable();
 	}
 
-	void OnGUI()
-	{
-		GUI.Box(new Rect(0, 0, 48, 24), data.steps.Count.ToString());
-	}
-
 	void Destroy()
 	{
 		Destroy(gameObject);
+	}
+
+	public void Die()
+	{
+		GAME.current.Respawn();
+	}
+
+	void OnGUI()
+	{
+		GUI.Box(new Rect(0, 0, 48, 24), data.steps.Count.ToString());
 	}
 }

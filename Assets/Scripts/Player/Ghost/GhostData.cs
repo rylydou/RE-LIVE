@@ -1,5 +1,4 @@
-﻿#pragma warning disable 649
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public struct GhostData

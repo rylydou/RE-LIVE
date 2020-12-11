@@ -1,5 +1,4 @@
-﻿#pragma warning disable 649
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -34,10 +33,28 @@ public class GAME : MonoBehaviour
 		Respawn();
 	}
 
+	public void Reload()
+	{
+		onRespawn.Invoke();
+
+		datas.Clear();
+
+		SpawnThings();
+
+		onStart.Invoke();
+	}
+
 	public void Respawn()
 	{
 		if (player) datas.Add(player.data);
 
+		SpawnThings();
+
+		onStart.Invoke();
+	}
+
+	public void SpawnThings()
+	{
 		onRespawn.Invoke();
 
 		for (int i = 0; i < datas.Count; i++)
@@ -47,7 +64,5 @@ public class GAME : MonoBehaviour
 		}
 
 		player = Instantiate(pfPlayer).GetComponent<Player>();
-
-		onStart.Invoke();
 	}
 }

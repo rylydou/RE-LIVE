@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Controller2D))]
 public class Mover2D : MonoBehaviour
@@ -23,6 +23,9 @@ public class Mover2D : MonoBehaviour
 	public Vector2 v2WallJumpClimb;
 	public Vector2 v2WallJumpOff;
 	public Vector2 v2WallLeap;
+	[Header("Other")]
+	public UnityEvent onJump = new UnityEvent();
+	public UnityEvent onLand = new UnityEvent();
 
 	// Data
 	[HideInInspector] public bool bIsControlable;
@@ -34,6 +37,8 @@ public class Mover2D : MonoBehaviour
 	int iWallDirX;
 	float fTimeToWallUnstick;
 	bool bWallSliding;
+	bool sendOnJump;
+	bool sendOnLand;
 
 	// Input
 	[HideInInspector] public Vector2 v2MoveInput;
@@ -111,6 +116,8 @@ public class Mover2D : MonoBehaviour
 				{
 					v2Velocity.y = fMaxJumpVelocity;
 				}
+
+				sendOnJump = true;
 			}
 		}
 
@@ -127,8 +134,18 @@ public class Mover2D : MonoBehaviour
 
 		controller.Move(v2Velocity * Time.fixedDeltaTime, v2ActualInput);
 
+		if (sendOnJump) onJump.Invoke();
+		else if (sendOnLand) onLand.Invoke();
+		sendOnJump = false;
+		sendOnLand = false;
+
 		if (controller.collisions.above || controller.collisions.below)
 		{
+			if (v2Velocity.y < -1f)
+			{
+				sendOnLand = true;
+			}
+
 			if (controller.collisions.slidingDownMaxSlope)
 			{
 				v2Velocity.y += controller.collisions.slopeNormal.y * -fGravity * Time.fixedDeltaTime;
