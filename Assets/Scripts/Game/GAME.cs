@@ -59,10 +59,10 @@ public class GAME : MonoBehaviour
 
 		for (int i = 0; i < datas.Count; i++)
 		{
-			Transform ghost = Instantiate(pfGhost, Vector2.zero, Quaternion.identity).transform;
+			Transform ghost = Instantiate(pfGhost, StageGen.current.data.v2StartPos, Quaternion.identity).transform;
 			ghost.GetComponent<Ghost>().ghostIndex = i;
 		}
 
-		player = Instantiate(pfPlayer).GetComponent<Player>();
+		player = Instantiate(pfPlayer, StageGen.current.data.v2StartPos, Quaternion.identity).GetComponent<Player>();
 	}
 }
