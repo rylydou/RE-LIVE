@@ -1944,7 +1944,7 @@ MonoBehaviour:
   v2iSize: {x: 20, y: 10}
   sStageName: Very Gud Level
   extention: .relive
-  pallet: {fileID: 11400000, guid: 47f513c8faf50ae4389fa882a84b13be, type: 2}
+  pallet: {fileID: 11400000, guid: b66a0a6d1afd5074fa19bc716629fb79, type: 2}
   tileTest: {fileID: 11400000, guid: 20d7b603a3e6eb5409cfc3277daa980b, type: 2}
   groundTilemap: {fileID: 246376666}
   tStage: {fileID: 1133432416}
