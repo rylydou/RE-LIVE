@@ -9,7 +9,7 @@ public class TilePallet : ScriptableObject
 	[Space]
 	[SerializeField] Tile tileNull;
 	[Space]
-	[NaughtyAttributes.ReorderableList] public Tile[] tiles;
+	public Tile[] tiles;
 
 	#region Utils
 	public Tile FindTile(TileConnections connections)
