@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 
 public class GAME : MonoBehaviour
@@ -9,6 +10,9 @@ public class GAME : MonoBehaviour
 	public static GAME current { get => m_current; }
 
 	// Perams
+	[SerializeField] RectTransform rtPointer;
+	[SerializeField] RectTransform rtGameRender;
+	[Space]
 	[SerializeField] GameObject pfPlayer;
 	[SerializeField] GameObject pfGhost;
 
@@ -16,9 +20,13 @@ public class GAME : MonoBehaviour
 	[HideInInspector] public Player player;
 	[HideInInspector] public UnityEvent onStart = new UnityEvent();
 	[HideInInspector] public UnityEvent onRespawn = new UnityEvent();
+	[HideInInspector] public Vector2 v2MouseWorldPos;
 
 	// Data
 	[HideInInspector] public List<GhostData> datas = new List<GhostData>();
+
+	// Input
+	Controls controls;
 
 	void Awake()
 	{
@@ -27,6 +35,13 @@ public class GAME : MonoBehaviour
 
 		m_current = this;
 		DontDestroyOnLoad(gameObject);
+
+		controls = new Controls();
+		// TODO: Make this not suck
+		controls.General.MousePosition.performed += (x) =>
+		{
+			v2MouseWorldPos = (rtPointer.position / new Vector2(Screen.width, Screen.height)) * (Camera.main.orthographicSize * new Vector2((float)Screen.width / (float)Screen.height * 2, (float)Screen.width / (float)Screen.height * 1.1f));
+		};
 
 		transform.SendMessage("Ready", SendMessageOptions.DontRequireReceiver);
 
@@ -65,4 +80,8 @@ public class GAME : MonoBehaviour
 
 		player = Instantiate(pfPlayer, StageGen.current.data.v2StartPos, Quaternion.identity).GetComponent<Player>();
 	}
+
+	void OnEnable() => controls.Enable();
+
+	void OnDisable() => controls.Disable();
 }

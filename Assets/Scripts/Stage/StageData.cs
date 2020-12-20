@@ -116,7 +116,7 @@ public struct StageData
 
 	public void SetTile(int x, int y, int id)
 	{
-		if (x >= 0 && x < size.x && y >= 0 && y < size.y) return;
+		if (x < 0 && x >= size.x && y < 0 && y >= size.y) return;
 		tiles[x, y] = id;
 	}
 

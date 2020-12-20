@@ -1,14 +1,8 @@
 ﻿using UnityEngine;
-using NaughtyAttributes;
 
 [System.Serializable]
 public struct TileConnections
 {
-#if UNITY_EDITOR
-	[AllowNesting, OnValueChanged("SetAll")]
-	[SerializeField] bool all;
-#endif
-	[Space]
 	public bool top;
 	public bool topRight;
 	public bool right;
@@ -119,7 +113,7 @@ public struct TileConnections
 				break;
 		}
 
-		Debug.LogError($"Out of range at {x}, {y} > {state}!");
+		// Debug.LogError($"Out of range at {x}, {y} > {state}!");
 	}
 
 	public void SetConnection(Vector2Int position, bool state)
@@ -127,20 +121,6 @@ public struct TileConnections
 		SetConnection(position.x, position.y, state);
 	}
 	#endregion
-
-#if UNITY_EDITOR
-	void SetAll()
-	{
-		top = all;
-		topRight = all;
-		right = all;
-		bottomRight = all;
-		bottom = all;
-		bottomLeft = all;
-		left = all;
-		topLeft = all;
-	}
-#endif
 
 	#region Other
 	public static bool operator ==(TileConnections left, TileConnections right)

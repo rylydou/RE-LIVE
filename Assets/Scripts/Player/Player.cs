@@ -77,8 +77,8 @@ public class Player : MonoBehaviour
 		GAME.current.Respawn();
 	}
 
-	void OnGUI()
-	{
-		GUI.Box(new Rect(0, 0, 48, 24), data.steps.Count.ToString());
-	}
+	// void OnGUI()
+	// {
+	// 	GUI.Box(new Rect(0, 0, 48, 24), data.steps.Count.ToString());
+	// }
 }

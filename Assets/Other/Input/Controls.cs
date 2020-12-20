@@ -659,6 +659,136 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
+        },
+        {
+            ""name"": ""General"",
+            ""id"": ""8a59c24c-b1a4-4384-877c-ccaca5dee89f"",
+            ""actions"": [
+                {
+                    ""name"": ""MousePosition"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""e03f11a0-bde4-4616-b514-a163f9a1ad18"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""913b4d35-f24f-4f66-a9ea-72939bbf2244"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""MousePosition"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Editor"",
+            ""id"": ""ad94407b-ac8b-4968-96b2-56eb3cd0a0e5"",
+            ""actions"": [
+                {
+                    ""name"": ""MousePos"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""3a71b52f-cff4-4f8b-8d58-1a2cd5ea112c"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Select"",
+                    ""type"": ""Button"",
+                    ""id"": ""62ad6512-ff28-4995-8da2-09a99df2e225"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""MoveCamera"",
+                    ""type"": ""Button"",
+                    ""id"": ""57b15c63-d030-48a7-8af9-7ca22c502bfc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Zoom"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""b3defdb5-c209-4f63-8cd7-8aa6d044e91e"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Erase"",
+                    ""type"": ""Button"",
+                    ""id"": ""43f5f071-bb9a-4b9a-b3db-8fd5b864447d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""70782dec-2f62-43ee-947b-c47fcc98ce8e"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""13238cd5-9324-4e02-bb4c-1bb10eff34c0"",
+                    ""path"": ""<Mouse>/scroll/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Zoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""512555c9-51ca-4fac-958c-d1e38d4d61c3"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""MousePos"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a38d5485-9a23-4512-8533-6e3c3c44fb0a"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Erase"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c5ee9bad-a8d8-4368-8d13-a65f80655c69"",
+                    ""path"": ""<Mouse>/middleButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""MoveCamera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -705,6 +835,16 @@ public class @Controls : IInputActionCollection, IDisposable
         m_Menu_Cancel = m_Menu.FindAction("Cancel", throwIfNotFound: true);
         m_Menu_Click = m_Menu.FindAction("Click", throwIfNotFound: true);
         m_Menu_Scroll = m_Menu.FindAction("Scroll", throwIfNotFound: true);
+        // General
+        m_General = asset.FindActionMap("General", throwIfNotFound: true);
+        m_General_MousePosition = m_General.FindAction("MousePosition", throwIfNotFound: true);
+        // Editor
+        m_Editor = asset.FindActionMap("Editor", throwIfNotFound: true);
+        m_Editor_MousePos = m_Editor.FindAction("MousePos", throwIfNotFound: true);
+        m_Editor_Select = m_Editor.FindAction("Select", throwIfNotFound: true);
+        m_Editor_MoveCamera = m_Editor.FindAction("MoveCamera", throwIfNotFound: true);
+        m_Editor_Zoom = m_Editor.FindAction("Zoom", throwIfNotFound: true);
+        m_Editor_Erase = m_Editor.FindAction("Erase", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -880,6 +1020,104 @@ public class @Controls : IInputActionCollection, IDisposable
         }
     }
     public MenuActions @Menu => new MenuActions(this);
+
+    // General
+    private readonly InputActionMap m_General;
+    private IGeneralActions m_GeneralActionsCallbackInterface;
+    private readonly InputAction m_General_MousePosition;
+    public struct GeneralActions
+    {
+        private @Controls m_Wrapper;
+        public GeneralActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @MousePosition => m_Wrapper.m_General_MousePosition;
+        public InputActionMap Get() { return m_Wrapper.m_General; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(GeneralActions set) { return set.Get(); }
+        public void SetCallbacks(IGeneralActions instance)
+        {
+            if (m_Wrapper.m_GeneralActionsCallbackInterface != null)
+            {
+                @MousePosition.started -= m_Wrapper.m_GeneralActionsCallbackInterface.OnMousePosition;
+                @MousePosition.performed -= m_Wrapper.m_GeneralActionsCallbackInterface.OnMousePosition;
+                @MousePosition.canceled -= m_Wrapper.m_GeneralActionsCallbackInterface.OnMousePosition;
+            }
+            m_Wrapper.m_GeneralActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @MousePosition.started += instance.OnMousePosition;
+                @MousePosition.performed += instance.OnMousePosition;
+                @MousePosition.canceled += instance.OnMousePosition;
+            }
+        }
+    }
+    public GeneralActions @General => new GeneralActions(this);
+
+    // Editor
+    private readonly InputActionMap m_Editor;
+    private IEditorActions m_EditorActionsCallbackInterface;
+    private readonly InputAction m_Editor_MousePos;
+    private readonly InputAction m_Editor_Select;
+    private readonly InputAction m_Editor_MoveCamera;
+    private readonly InputAction m_Editor_Zoom;
+    private readonly InputAction m_Editor_Erase;
+    public struct EditorActions
+    {
+        private @Controls m_Wrapper;
+        public EditorActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @MousePos => m_Wrapper.m_Editor_MousePos;
+        public InputAction @Select => m_Wrapper.m_Editor_Select;
+        public InputAction @MoveCamera => m_Wrapper.m_Editor_MoveCamera;
+        public InputAction @Zoom => m_Wrapper.m_Editor_Zoom;
+        public InputAction @Erase => m_Wrapper.m_Editor_Erase;
+        public InputActionMap Get() { return m_Wrapper.m_Editor; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(EditorActions set) { return set.Get(); }
+        public void SetCallbacks(IEditorActions instance)
+        {
+            if (m_Wrapper.m_EditorActionsCallbackInterface != null)
+            {
+                @MousePos.started -= m_Wrapper.m_EditorActionsCallbackInterface.OnMousePos;
+                @MousePos.performed -= m_Wrapper.m_EditorActionsCallbackInterface.OnMousePos;
+                @MousePos.canceled -= m_Wrapper.m_EditorActionsCallbackInterface.OnMousePos;
+                @Select.started -= m_Wrapper.m_EditorActionsCallbackInterface.OnSelect;
+                @Select.performed -= m_Wrapper.m_EditorActionsCallbackInterface.OnSelect;
+                @Select.canceled -= m_Wrapper.m_EditorActionsCallbackInterface.OnSelect;
+                @MoveCamera.started -= m_Wrapper.m_EditorActionsCallbackInterface.OnMoveCamera;
+                @MoveCamera.performed -= m_Wrapper.m_EditorActionsCallbackInterface.OnMoveCamera;
+                @MoveCamera.canceled -= m_Wrapper.m_EditorActionsCallbackInterface.OnMoveCamera;
+                @Zoom.started -= m_Wrapper.m_EditorActionsCallbackInterface.OnZoom;
+                @Zoom.performed -= m_Wrapper.m_EditorActionsCallbackInterface.OnZoom;
+                @Zoom.canceled -= m_Wrapper.m_EditorActionsCallbackInterface.OnZoom;
+                @Erase.started -= m_Wrapper.m_EditorActionsCallbackInterface.OnErase;
+                @Erase.performed -= m_Wrapper.m_EditorActionsCallbackInterface.OnErase;
+                @Erase.canceled -= m_Wrapper.m_EditorActionsCallbackInterface.OnErase;
+            }
+            m_Wrapper.m_EditorActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @MousePos.started += instance.OnMousePos;
+                @MousePos.performed += instance.OnMousePos;
+                @MousePos.canceled += instance.OnMousePos;
+                @Select.started += instance.OnSelect;
+                @Select.performed += instance.OnSelect;
+                @Select.canceled += instance.OnSelect;
+                @MoveCamera.started += instance.OnMoveCamera;
+                @MoveCamera.performed += instance.OnMoveCamera;
+                @MoveCamera.canceled += instance.OnMoveCamera;
+                @Zoom.started += instance.OnZoom;
+                @Zoom.performed += instance.OnZoom;
+                @Zoom.canceled += instance.OnZoom;
+                @Erase.started += instance.OnErase;
+                @Erase.performed += instance.OnErase;
+                @Erase.canceled += instance.OnErase;
+            }
+        }
+    }
+    public EditorActions @Editor => new EditorActions(this);
     private int m_KeyboardSchemeIndex = -1;
     public InputControlScheme KeyboardScheme
     {
@@ -913,5 +1151,17 @@ public class @Controls : IInputActionCollection, IDisposable
         void OnCancel(InputAction.CallbackContext context);
         void OnClick(InputAction.CallbackContext context);
         void OnScroll(InputAction.CallbackContext context);
+    }
+    public interface IGeneralActions
+    {
+        void OnMousePosition(InputAction.CallbackContext context);
+    }
+    public interface IEditorActions
+    {
+        void OnMousePos(InputAction.CallbackContext context);
+        void OnSelect(InputAction.CallbackContext context);
+        void OnMoveCamera(InputAction.CallbackContext context);
+        void OnZoom(InputAction.CallbackContext context);
+        void OnErase(InputAction.CallbackContext context);
     }
 }

@@ -1,13 +1,12 @@
 ﻿using System.Linq;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
-[CreateAssetMenu(fileName = "Tile Pallet", menuName = "RE-LIVE/Tile Pallet", order = 1)]
-public class TilePallet : ScriptableObject
+[CreateAssetMenu(fileName = "Tile Palette", menuName = "RE-LIVE/Tile Palette", order = 1)]
+public class TilePalette : ScriptableObject
 {
-	public string palletName;
+	public Sprite spIcon;
 	[Space]
-	[SerializeField] Tile tileNull;
+	public Tile tileNull;
 	[Space]
 	public Tile[] tiles;
 

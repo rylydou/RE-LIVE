@@ -14,9 +14,6 @@ public class StageGen : MonoBehaviour
 	[Space]
 	[SerializeField] string extention = ".relive";
 	[Space]
-	[SerializeField] TilePallet pallet;
-	[SerializeField] TileBase tileTest;
-	[Space]
 	[SerializeField] Tilemap groundTilemap;
 	[SerializeField] Transform tStage;
 	[SerializeField] GameObject pfTestObject;
@@ -53,16 +50,31 @@ public class StageGen : MonoBehaviour
 		}
 	}
 
-	public void RefreshTile(Vector2Int position)
+	public void RefreshTile(Vector2Int position, bool bUpdateSurroundingTiles = false)
 	{
-		if (data.GetTile(position) != 0)
+		if (position.x < 0 && position.x >= data.size.x && position.y < 0 && position.y >= data.size.y) return;
+
+		if (data.GetTile(position) == 0)
+			groundTilemap.SetTile((Vector3Int)position, null);
+		else
 		{
-			// groundTilemap.SetTile((Vector3Int)position, tileTest);
-			groundTilemap.SetTile((Vector3Int)position, pallet.FindTile(data.GetTileConnections(position.x, position.y, 1)).tile);
+			int id = data.GetTile(position.x, position.y);
+
+			groundTilemap.SetTile((Vector3Int)position, PaletteManager.current.palettes[id].FindTile(data.GetTileConnections(position.x, position.y, id)).tile);
+		}
+
+		if (!bUpdateSurroundingTiles) return;
+
+		for (int y = -1; y <= 1; y++)
+		{
+			for (int x = -1; x <= 1; x++)
+			{
+				RefreshTile(position + new Vector2Int(x, y), false);
+			}
 		}
 	}
 
-	public void RefreshTile(int x, int y) => RefreshTile(new Vector2Int(x, y));
+	public void RefreshTile(int x, int y, bool bUpdateSurroundingTiles = false) => RefreshTile(new Vector2Int(x, y), bUpdateSurroundingTiles);
 	#endregion
 
 	#region Saving and Loading

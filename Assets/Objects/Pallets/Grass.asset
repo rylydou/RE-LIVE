@@ -11,13 +11,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2fdbed227198804ab2cfe1f7a047832, type: 3}
   m_Name: Grass
-  m_EditorClassIdentifier: 
-  palletName: Basic
+  m_EditorClassIdentifier: Assembly-CSharp::TilePalette
+  spIcon: {fileID: 8708326412996271838, guid: d98bdf12531789b47af8ad2a00ce8ed8, type: 3}
   tileNull:
-    sprite: {fileID: 0}
     tile: {fileID: 11400000, guid: c51e361fb7bbc9640991bccaf1628a9b, type: 2}
     connections:
-      all: 0
       top: 0
       topRight: 0
       right: 0
@@ -27,10 +25,8 @@ MonoBehaviour:
       left: 0
       topLeft: 0
   tiles:
-  - sprite: {fileID: -1347532211411968617, guid: d98bdf12531789b47af8ad2a00ce8ed8, type: 3}
-    tile: {fileID: 11400000, guid: 055ebae0cd1f29b499155a72b1d77c66, type: 2}
+  - tile: {fileID: 11400000, guid: 055ebae0cd1f29b499155a72b1d77c66, type: 2}
     connections:
-      all: 0
       top: 0
       topRight: 0
       right: 1
@@ -39,10 +35,8 @@ MonoBehaviour:
       bottomLeft: 0
       left: 0
       topLeft: 0
-  - sprite: {fileID: 4564998844612868550, guid: 592fab9dc5d54434285df6c1b2531d17, type: 3}
-    tile: {fileID: 11400000, guid: 60dd870e98509414cbd8c1eacbc10d4c, type: 2}
+  - tile: {fileID: 11400000, guid: 60dd870e98509414cbd8c1eacbc10d4c, type: 2}
     connections:
-      all: 0
       top: 0
       topRight: 0
       right: 1
@@ -51,10 +45,8 @@ MonoBehaviour:
       bottomLeft: 1
       left: 1
       topLeft: 0
-  - sprite: {fileID: -4247985510503474263, guid: 592fab9dc5d54434285df6c1b2531d17, type: 3}
-    tile: {fileID: 11400000, guid: fb1e334f5ba0b204394a0dea72ff693c, type: 2}
+  - tile: {fileID: 11400000, guid: fb1e334f5ba0b204394a0dea72ff693c, type: 2}
     connections:
-      all: 0
       top: 0
       topRight: 0
       right: 0
@@ -63,10 +55,8 @@ MonoBehaviour:
       bottomLeft: 1
       left: 1
       topLeft: 0
-  - sprite: {fileID: -6019871652338619649, guid: 592fab9dc5d54434285df6c1b2531d17, type: 3}
-    tile: {fileID: 11400000, guid: 70612d45ba07d384d9966f777adbd37e, type: 2}
+  - tile: {fileID: 11400000, guid: 70612d45ba07d384d9966f777adbd37e, type: 2}
     connections:
-      all: 0
       top: 1
       topRight: 1
       right: 1
@@ -75,10 +65,8 @@ MonoBehaviour:
       bottomLeft: 0
       left: 0
       topLeft: 0
-  - sprite: {fileID: 8370124977983469142, guid: 592fab9dc5d54434285df6c1b2531d17, type: 3}
-    tile: {fileID: 11400000, guid: 53502eb581ae5464c9c83fab77532033, type: 2}
+  - tile: {fileID: 11400000, guid: 53502eb581ae5464c9c83fab77532033, type: 2}
     connections:
-      all: 0
       top: 1
       topRight: 1
       right: 1
@@ -87,10 +75,8 @@ MonoBehaviour:
       bottomLeft: 1
       left: 1
       topLeft: 1
-  - sprite: {fileID: 9108534716330185296, guid: 592fab9dc5d54434285df6c1b2531d17, type: 3}
-    tile: {fileID: 11400000, guid: 49a68a3e9c33fb94c97aa9880873bed9, type: 2}
+  - tile: {fileID: 11400000, guid: 49a68a3e9c33fb94c97aa9880873bed9, type: 2}
     connections:
-      all: 0
       top: 1
       topRight: 0
       right: 0
@@ -99,10 +85,8 @@ MonoBehaviour:
       bottomLeft: 1
       left: 1
       topLeft: 1
-  - sprite: {fileID: -2646651901884672449, guid: 592fab9dc5d54434285df6c1b2531d17, type: 3}
-    tile: {fileID: 11400000, guid: 06237727fc3527148a5144c5f6211947, type: 2}
+  - tile: {fileID: 11400000, guid: 06237727fc3527148a5144c5f6211947, type: 2}
     connections:
-      all: 0
       top: 1
       topRight: 1
       right: 1
@@ -111,10 +95,8 @@ MonoBehaviour:
       bottomLeft: 0
       left: 0
       topLeft: 0
-  - sprite: {fileID: 6284401283013561674, guid: 592fab9dc5d54434285df6c1b2531d17, type: 3}
-    tile: {fileID: 11400000, guid: 5c0abe9460b81c94ab6784f0eb550ed8, type: 2}
+  - tile: {fileID: 11400000, guid: 5c0abe9460b81c94ab6784f0eb550ed8, type: 2}
     connections:
-      all: 0
       top: 1
       topRight: 1
       right: 1
@@ -123,10 +105,8 @@ MonoBehaviour:
       bottomLeft: 0
       left: 1
       topLeft: 1
-  - sprite: {fileID: 3081259622961926731, guid: 592fab9dc5d54434285df6c1b2531d17, type: 3}
-    tile: {fileID: 11400000, guid: d78f1a541afaf474f936625dd7158aa1, type: 2}
+  - tile: {fileID: 11400000, guid: d78f1a541afaf474f936625dd7158aa1, type: 2}
     connections:
-      all: 0
       top: 1
       topRight: 0
       right: 0
@@ -135,10 +115,8 @@ MonoBehaviour:
       bottomLeft: 0
       left: 1
       topLeft: 1
-  - sprite: {fileID: 6623730380747189143, guid: 592fab9dc5d54434285df6c1b2531d17, type: 3}
-    tile: {fileID: 11400000, guid: e98d37afe17744e42af432593d8f07c4, type: 2}
+  - tile: {fileID: 11400000, guid: e98d37afe17744e42af432593d8f07c4, type: 2}
     connections:
-      all: 0
       top: 0
       topRight: 0
       right: 0
@@ -147,10 +125,8 @@ MonoBehaviour:
       bottomLeft: 0
       left: 0
       topLeft: 0
-  - sprite: {fileID: -5241760623638581233, guid: 592fab9dc5d54434285df6c1b2531d17, type: 3}
-    tile: {fileID: 11400000, guid: e4c58c8a3e02eee4391f77080e857eff, type: 2}
+  - tile: {fileID: 11400000, guid: e4c58c8a3e02eee4391f77080e857eff, type: 2}
     connections:
-      all: 0
       top: 1
       topRight: 0
       right: 0
@@ -159,10 +135,8 @@ MonoBehaviour:
       bottomLeft: 0
       left: 0
       topLeft: 0
-  - sprite: {fileID: 2047397491309481512, guid: 592fab9dc5d54434285df6c1b2531d17, type: 3}
-    tile: {fileID: 11400000, guid: 8be5f18871960b046b1efa1ae22abe20, type: 2}
+  - tile: {fileID: 11400000, guid: 8be5f18871960b046b1efa1ae22abe20, type: 2}
     connections:
-      all: 0
       top: 1
       topRight: 0
       right: 0
@@ -171,10 +145,8 @@ MonoBehaviour:
       bottomLeft: 0
       left: 0
       topLeft: 0
-  - sprite: {fileID: -8276140089702118719, guid: 592fab9dc5d54434285df6c1b2531d17, type: 3}
-    tile: {fileID: 11400000, guid: 84576284ffe8c9a4c9a2455d36371fb9, type: 2}
+  - tile: {fileID: 11400000, guid: 84576284ffe8c9a4c9a2455d36371fb9, type: 2}
     connections:
-      all: 0
       top: 0
       topRight: 0
       right: 1
@@ -183,10 +155,8 @@ MonoBehaviour:
       bottomLeft: 0
       left: 0
       topLeft: 0
-  - sprite: {fileID: 8129276003047779963, guid: 592fab9dc5d54434285df6c1b2531d17, type: 3}
-    tile: {fileID: 11400000, guid: 6d8e314558152494591d5844326a090f, type: 2}
+  - tile: {fileID: 11400000, guid: 6d8e314558152494591d5844326a090f, type: 2}
     connections:
-      all: 0
       top: 0
       topRight: 0
       right: 1
@@ -195,10 +165,8 @@ MonoBehaviour:
       bottomLeft: 0
       left: 1
       topLeft: 0
-  - sprite: {fileID: -22804317248558295, guid: 592fab9dc5d54434285df6c1b2531d17, type: 3}
-    tile: {fileID: 11400000, guid: 46eb0cbf4dedf9f4a915f73569f25129, type: 2}
+  - tile: {fileID: 11400000, guid: 46eb0cbf4dedf9f4a915f73569f25129, type: 2}
     connections:
-      all: 0
       top: 0
       topRight: 0
       right: 0
@@ -207,10 +175,8 @@ MonoBehaviour:
       bottomLeft: 0
       left: 1
       topLeft: 0
-  - sprite: {fileID: -296017328593241320, guid: 592fab9dc5d54434285df6c1b2531d17, type: 3}
-    tile: {fileID: 11400000, guid: 12b530cb0ac099f4ba34884f184811b3, type: 2}
+  - tile: {fileID: 11400000, guid: 12b530cb0ac099f4ba34884f184811b3, type: 2}
     connections:
-      all: 0
       top: 0
       topRight: 0
       right: 0

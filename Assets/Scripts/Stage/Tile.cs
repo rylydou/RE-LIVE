@@ -5,9 +5,17 @@ using UnityEngine.Tilemaps;
 public struct Tile
 {
 	[NaughtyAttributes.ShowAssetPreview]
-	public Sprite sprite;
-	[NaughtyAttributes.ShowAssetPreview]
 	public TileBase tile;
 	[Space]
 	public TileConnections connections;
+
+	public Sprite sprite
+	{
+		get
+		{
+			TileData tileData = new TileData();
+			tile.GetTileData(Vector3Int.zero, null, ref tileData);
+			return tileData.sprite;
+		}
+	}
 }
