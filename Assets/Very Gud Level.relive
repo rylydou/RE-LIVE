@@ -15,9 +15,17 @@
 		{
 			"id": 1,
 			"position": {
-				"x": 5,
-				"y": 4
-			}
+				"x": 0,
+				"y": 0
+			},
+			"peramVars": [
+				"size_x",
+				"size_y"
+			],
+			"peramValues": [
+				"20",
+				"1"
+			]
 		}
 	],
 	"serializableTiles": [

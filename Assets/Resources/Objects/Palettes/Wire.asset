@@ -1,0 +1,187 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2fdbed227198804ab2cfe1f7a047832, type: 3}
+  m_Name: Wire
+  m_EditorClassIdentifier: Assembly-CSharp::TilePalette
+  spIcon: {fileID: 2221616182191107254, guid: 715f300c18266ec48be5719f050c194f, type: 3}
+  tileNull:
+    tile: {fileID: 11400000, guid: c51e361fb7bbc9640991bccaf1628a9b, type: 2}
+    connections:
+      top: 0
+      topRight: 0
+      right: 0
+      bottomRight: 0
+      bottom: 0
+      bottomLeft: 0
+      left: 0
+      topLeft: 0
+  tiles:
+  - tile: {fileID: 11400000, guid: cfa5b461eac058f4b9f364703e4a488e, type: 2}
+    connections:
+      top: 0
+      topRight: 0
+      right: 0
+      bottomRight: 0
+      bottom: 1
+      bottomLeft: 0
+      left: 0
+      topLeft: 0
+  - tile: {fileID: 11400000, guid: 0793fc14f04ee4c4db7b3ab4273b5c97, type: 2}
+    connections:
+      top: 0
+      topRight: 0
+      right: 0
+      bottomRight: 0
+      bottom: 1
+      bottomLeft: 0
+      left: 1
+      topLeft: 0
+  - tile: {fileID: 11400000, guid: 747dd9e6b03b4af448ace9afa6a28136, type: 2}
+    connections:
+      top: 0
+      topRight: 0
+      right: 0
+      bottomRight: 0
+      bottom: 0
+      bottomLeft: 0
+      left: 1
+      topLeft: 0
+  - tile: {fileID: 11400000, guid: a79831232475c944bb554078700bb820, type: 2}
+    connections:
+      top: 0
+      topRight: 0
+      right: 0
+      bottomRight: 0
+      bottom: 0
+      bottomLeft: 0
+      left: 0
+      topLeft: 0
+  - tile: {fileID: 11400000, guid: 97f98951156a438449cbc2e5ce1b86e5, type: 2}
+    connections:
+      top: 0
+      topRight: 0
+      right: 1
+      bottomRight: 0
+      bottom: 0
+      bottomLeft: 0
+      left: 0
+      topLeft: 0
+  - tile: {fileID: 11400000, guid: d959d074de08091449d54bfe76a363e0, type: 2}
+    connections:
+      top: 0
+      topRight: 0
+      right: 1
+      bottomRight: 0
+      bottom: 1
+      bottomLeft: 0
+      left: 0
+      topLeft: 0
+  - tile: {fileID: 11400000, guid: 19911a15ca154fa49b564f863dad0230, type: 2}
+    connections:
+      top: 0
+      topRight: 0
+      right: 1
+      bottomRight: 0
+      bottom: 1
+      bottomLeft: 0
+      left: 1
+      topLeft: 0
+  - tile: {fileID: 11400000, guid: 3982d921ee65b7741aee3651040840b9, type: 2}
+    connections:
+      top: 0
+      topRight: 0
+      right: 1
+      bottomRight: 0
+      bottom: 0
+      bottomLeft: 0
+      left: 1
+      topLeft: 0
+  - tile: {fileID: 11400000, guid: d1dcc64d525ed554dabda7f5d17d5e8d, type: 2}
+    connections:
+      top: 1
+      topRight: 0
+      right: 0
+      bottomRight: 0
+      bottom: 0
+      bottomLeft: 0
+      left: 0
+      topLeft: 0
+  - tile: {fileID: 11400000, guid: 9fccb1ff37533fa4aa804542e473ee5b, type: 2}
+    connections:
+      top: 1
+      topRight: 0
+      right: 0
+      bottomRight: 0
+      bottom: 1
+      bottomLeft: 0
+      left: 0
+      topLeft: 0
+  - tile: {fileID: 11400000, guid: 4bcf8453e2757154d92ff0be5c1dfe00, type: 2}
+    connections:
+      top: 1
+      topRight: 0
+      right: 0
+      bottomRight: 0
+      bottom: 1
+      bottomLeft: 0
+      left: 1
+      topLeft: 0
+  - tile: {fileID: 11400000, guid: 5667e61e14ef1a24fa61511664c53a2c, type: 2}
+    connections:
+      top: 1
+      topRight: 0
+      right: 0
+      bottomRight: 0
+      bottom: 0
+      bottomLeft: 0
+      left: 1
+      topLeft: 0
+  - tile: {fileID: 11400000, guid: 9b37632b9f6aaf146a28be7c59f30f65, type: 2}
+    connections:
+      top: 1
+      topRight: 0
+      right: 1
+      bottomRight: 0
+      bottom: 0
+      bottomLeft: 0
+      left: 0
+      topLeft: 0
+  - tile: {fileID: 11400000, guid: 561b4806e8b649b43b5de7b2897a4d75, type: 2}
+    connections:
+      top: 1
+      topRight: 0
+      right: 1
+      bottomRight: 0
+      bottom: 1
+      bottomLeft: 0
+      left: 0
+      topLeft: 0
+  - tile: {fileID: 11400000, guid: aea3a9d7e741b1347b81653da660f87b, type: 2}
+    connections:
+      top: 1
+      topRight: 0
+      right: 1
+      bottomRight: 0
+      bottom: 1
+      bottomLeft: 0
+      left: 1
+      topLeft: 0
+  - tile: {fileID: 11400000, guid: e2af39a852fe503488b04162a1648fcd, type: 2}
+    connections:
+      top: 1
+      topRight: 0
+      right: 1
+      bottomRight: 0
+      bottom: 0
+      bottomLeft: 0
+      left: 1
+      topLeft: 0

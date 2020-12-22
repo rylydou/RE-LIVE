@@ -59,7 +59,7 @@ public class Player : MonoBehaviour
 		// Animation
 		if (!Mathf.Approximately(mover.v2MoveInput.x, 0)) transform.localScale = new Vector3(mover.v2MoveInput.x > 0 ? 1 : -1, 1, 1);
 
-		transform.position = new Vector2(Mathf.Clamp(transform.position.x, 0, StageGen.current.data.size.x), Mathf.Clamp(transform.position.y, 0, StageGen.current.data.size.y));
+		transform.position = new Vector2(Mathf.Clamp(transform.position.x, 0, StageBuilder.current.data.size.x), Mathf.Clamp(transform.position.y, 0, StageBuilder.current.data.size.y));
 	}
 
 	void OnDisable()
