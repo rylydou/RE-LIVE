@@ -28,6 +28,7 @@ public class Logger : MonoBehaviour
 		m_current = this;
 		DontDestroyOnLoad(gameObject);
 
+#if !UNITY_EDITOR
 		logPath = $"{Application.dataPath}/Logs";
 
 		startTime = System.DateTime.Now.ToString("yyyy-MM-dd HH.mm.ss");
@@ -37,6 +38,7 @@ public class Logger : MonoBehaviour
 		Application.logMessageReceivedThreaded += (condition, stackTrace, type) => OnLogRecive(condition, stackTrace, type);
 		Application.logMessageReceived += (condition, stackTrace, type) => OnLogRecive(condition, stackTrace, type);
 		Application.lowMemory += () => OnLowMem();
+#endif
 	}
 
 	void OnLogRecive(string condition, string stackTrace, LogType type)
@@ -70,9 +72,11 @@ public class Logger : MonoBehaviour
 		writer.WriteLine(Application.genuineCheckAvailable ? Application.genuine ? "Not modded" : "Modded" : "Can't check if modded");
 	}
 
+#if !UNITY_EDITOR
 	void OnApplicationQuit() => writer.Dispose();
 
 	void OnDisable() => writer.Dispose();
 
 	void OnDestroy() => writer.Dispose();
+#endif
 }
