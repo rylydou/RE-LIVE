@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1741695996406030438}
+  - component: {fileID: -6382693387843318540}
   - component: {fileID: 1741695996406030441}
   m_Layer: 4
   m_Name: Water Slice
@@ -31,6 +32,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-6382693387843318540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741695996406030440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34bbc97d36264904ab2fccea535434a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: f0e55af9e2bc18544ba95f5f54f8feb9, type: 3}
 --- !u!212 &1741695996406030441
 SpriteRenderer:
   m_ObjectHideFlags: 0

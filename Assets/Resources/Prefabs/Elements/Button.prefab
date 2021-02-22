@@ -39,6 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6366538120510624309}
+  - component: {fileID: 4375470066601202725}
   - component: {fileID: 6366538120510624310}
   - component: {fileID: 6366538120510624308}
   - component: {fileID: 6366538120510624311}
@@ -64,6 +65,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4375470066601202725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6366538120510624314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34bbc97d36264904ab2fccea535434a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 649223268058989734, guid: 8ce2bf9074db1264591bebfca7576455, type: 3}
 --- !u!114 &6366538120510624310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,6 +90,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0770cc47234d634898f29dcbe18b297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data:
+    id: 0
+    position: {x: 0, y: 0}
+    peramVars: []
+    peramValues: []
+  index: 0
   triggers: []
   spUp: {fileID: 649223268058989734, guid: 8ce2bf9074db1264591bebfca7576455, type: 3}
   spDown: {fileID: -9000188618666376746, guid: 8ce2bf9074db1264591bebfca7576455, type: 3}
